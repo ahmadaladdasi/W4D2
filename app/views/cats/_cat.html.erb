@@ -1,0 +1,40 @@
+
+<h1> <%= cat.name %> </h1>
+
+<table>
+
+  <tr>
+    <th> attribute </th>
+    <th> value </th>
+  </tr>
+
+  <tr>
+    <td> age </td>
+    <td> <%= cat.age %> </td>
+  </tr>
+
+  <tr>
+    <td> birth_date </td>
+    <td><%= cat.birth_date %></td>
+  </tr>
+
+  <tr>
+    <td> color </td>
+    <td><%=  cat.color %></td>
+  </tr>
+
+  <tr>
+    <td> sex </td>
+    <td><%=  cat.sex %></td>
+  </tr>
+
+  <tr>
+    <td> description </td>
+    <td><%=  cat.description %></td>
+  </tr>
+
+</table>
+
+<%if action = :index %>
+  <%= link_to "Rent #{cat.name}", cat_url(cat)  %>
+<%end %>
